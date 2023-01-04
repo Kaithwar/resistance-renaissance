@@ -2,13 +2,9 @@ import React from "react";
 import "./homePage.css";
 import { Card } from "antd";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import WorkoutPlan from "./WorkoutPlan/WorkoutPlan";
-import ProteinGuide from "./ProteinGuide/ProteinGuide";
-
-const gridStyle = {
-  width: "33.3%",
-  color: "white",
-};
+import WorkoutPlan from "./workoutPlan/WorkoutPlan";
+import ProteinGuide from "./proteinGuide/ProteinGuide";
+import General from "./general/General";
 
 const cardStyle = {
   textAlign: "center",
@@ -17,11 +13,32 @@ const cardStyle = {
   backgroundColor: "black",
   height: "100%",
   width: "100%",
+  display: "flex",
+  flexDirection: "column",
+};
+
+const linkStyle = {
+  width: "100%",
+  flexGrow: 1,
+};
+
+const gridStyle = {
+  color: "white",
+  width: "100%",
 };
 
 function goToWorkoutPlan() {
-  console.log("Heyyyy");
+  console.log("loading workout plan...");
 }
+
+function goToProteinGuide() {
+  console.log("loading protein guide...");
+}
+
+function goToGeneral() {
+  console.log("loading everything you need to know...");
+}
+
 function App() {
   return (
     <Router>
@@ -30,20 +47,27 @@ function App() {
           style={cardStyle}
           title="You are ready to start your fitness journey"
         >
-          <Link to="/workoutPlan">
-            <Card.Grid style={gridStyle} onClick={() => goToWorkoutPlan()}>
+          <Link to="/workoutPlan" style={linkStyle}>
+            <Card.Grid style={gridStyle} onClick={() => goToWorkoutPlan}>
               Workout Plan
             </Card.Grid>
           </Link>
-          <Link to="/proteinGuide" style={gridStyle}>
-            <Card.Grid>Protein Guide</Card.Grid>
+          <Link to="/proteinGuide" style={linkStyle}>
+            <Card.Grid style={gridStyle} onClick={() => goToProteinGuide}>
+              Protein Guide
+            </Card.Grid>
           </Link>
-          <Card.Grid style={gridStyle}>Everything you need to know</Card.Grid>
+          <Link to="/general" style={linkStyle}>
+            <Card.Grid style={gridStyle} onClick={() => goToGeneral}>
+              Everything you need to know
+            </Card.Grid>
+          </Link>
         </Card>
       </div>
       <Routes>
         <Route exact path="/workoutPlan" element={<WorkoutPlan />}></Route>
         <Route exact path="/proteinGuide" element={<ProteinGuide />}></Route>
+        <Route exact path="/general" element={<General />}></Route>
       </Routes>
     </Router>
   );

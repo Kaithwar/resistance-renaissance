@@ -1,7 +1,7 @@
 import React from "react";
 
 function ProteinGuide() {
-    return<div>my prtein intake</div>
+  return <div>my protein intake</div>;
 }
 
 export default ProteinGuide;

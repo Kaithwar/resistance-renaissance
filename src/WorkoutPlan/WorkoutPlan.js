@@ -1,54 +1,67 @@
-import React from "react";
 import "../Styles/workoutPlan.css";
+import React,{useState} from 'react';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown'
 
 function WorkoutPlan() {
+  const [day,setDay]=useState('Monday');
+  const [value,setValue]=useState('1');
+  const handleSelect=(e)=>{
+    console.log(e);
+    setValue(e)
+  }
+  const handleSelect2=(e)=>{
+    console.log(e);
+    setDay(e);
+  }
   console.log("i am in workoutPlan");
   return (
     <div className="workoutPlan">
-      <div className="Plan">
+       <h1>Make Your WorkOut Plan</h1>
+       <br></br>
         <div className="box-width">
-          <h1>Make Your WorkOut Plan</h1>
-          <div className="head">
-            <p>Create a Workout Plan for me:</p>
+         
+         
+            <p id="text">Create a Workout Plan for me:</p>
             <p>Days per week:</p>
-            <div class="dropdown">
-              <div className="select">
-                <span className="selected">7</span>
-                <div className="caret"></div>
-              </div>
-              <div className="menu">
-                <ul className="menu">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                </ul>
-              </div>
-            </div>
+            <div className="App container" id="drop">
+      <DropdownButton
+      alignRight
+      title={value}
+      id="dropdown-menu-align-right"
+      onSelect={handleSelect}
+        >
+              <Dropdown.Item eventKey="1">1</Dropdown.Item>
+              <Dropdown.Item eventKey="2">2</Dropdown.Item>
+              <Dropdown.Item eventKey="3">3</Dropdown.Item>
+              <Dropdown.Item eventKey="4">4</Dropdown.Item>
+              <Dropdown.Item eventKey="5">5</Dropdown.Item>
+              <Dropdown.Item eventKey="6">6</Dropdown.Item>
+              <Dropdown.Item eventKey="7">7</Dropdown.Item>
+              
+      </DropdownButton>
+     
+    </div>
             <p>Start On:</p>
-            <div class="dropdown">
-              <div className="select">
-                <span className="selected">Monday</span>
-                <div className="caret"></div>
-              </div>
-              <div className="menu">
-                <ul className="menu">
-                  <li>Monday</li>
-                  <li>Tuesday</li>
-                  <li>Wednesday</li>
-                  <li>Thursday</li>
-                  <li>Friday</li>
-                  <li>Saturday</li>
-                  <li>Sunday</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            <div className="App container" id="drop" style={{paddingLeft:"20px"}}>
+            <DropdownButton
+      alignRight
+      title={day}
+      id="dropdown-menu-align-right"
+      onSelect={handleSelect2} 
+        >
+              <Dropdown.Item eventKey="Monday">Monday</Dropdown.Item>
+              <Dropdown.Item eventKey="Tuesday">Tuesday</Dropdown.Item>
+              <Dropdown.Item eventKey="Wednesday">Wednesday</Dropdown.Item>
+              <Dropdown.Item eventKey="Thursday">Thursday</Dropdown.Item>
+              <Dropdown.Item eventKey="Friday">Friday</Dropdown.Item>
+              <Dropdown.Item eventKey="Saturday">Saturday</Dropdown.Item>
+              <Dropdown.Item eventKey="Sunday">Sunday</Dropdown.Item>
+              
+      </DropdownButton>
+          </div></div>
+        
+      
     </div>
   );
 }

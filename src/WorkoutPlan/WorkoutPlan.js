@@ -2,6 +2,8 @@ import "../Styles/workoutPlan.css";
 import React, { useState } from 'react';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
+import { Link } from "react-router-dom";
+
 
 function WorkoutPlan() {
   const [day, setDay] = useState('Monday');
@@ -71,11 +73,17 @@ function WorkoutPlan() {
       </div>
       <div className="days bg exe">
         <p>Rest</p>
+        <div className="line"></div>
         <p>Push</p>
+        <div className="line"></div>
         <p>Pull</p>
+        <div className="line"></div>
         <p>Rest</p>
+        <div className="line"></div>
         <p>Push</p>
+        <div className="line"></div>
         <p>Legs</p>
+        <div className="line"></div>
         <p>Rest</p>
       </div>
 
@@ -86,9 +94,21 @@ function WorkoutPlan() {
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
         </div>
-        <div className="video">
-          <iframe width="450" height="250" src="https://www.youtube.com/embed/ml6cT4AZdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div className="gym">
+          <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
+          <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
+          <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
+          <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
         </div>
+        <div className="video">
+          <iframe width="410" height="220" src="https://www.youtube.com/embed/ml6cT4AZdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div className="back">
+        <Link to={"/"}>Back to Home</Link>
+        <Link to={"/"}>Got it! Send todays Workout plan on my phone</Link>
+        <Link to={"/proteinGuide"}>Take me to Protein guide</Link>
       </div>
     </div>
   );

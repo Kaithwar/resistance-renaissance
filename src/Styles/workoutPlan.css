@@ -42,8 +42,8 @@
 .days {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
+  justify-content: space-evenly;
+  padding: 10px 44px;
 }
 .exe {
   justify-content: space-around;
@@ -68,18 +68,27 @@
   font-size: 18px;
 }
 
+.gym{
+  padding: 30px 10px;
+}
+
 .notes{
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 35px 70px;
-  padding: 30px 23px;
+  padding: 2px 23px;
   border-radius: 25px;
 }
 
 .days .line{
   height: 65px;
   width: 3px;
+  background-color: white;
+}
+.bigline{
+  height: 310px;
+  width: 4px;
   background-color: white;
 }
 
@@ -97,4 +106,8 @@
   border: 1px solid transparent;
   background: #0b5ed7;
   border-radius: 10px;
+}
+
+.video{
+  margin:  10px 20px;
 }

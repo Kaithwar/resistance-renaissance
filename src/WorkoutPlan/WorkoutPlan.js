@@ -63,13 +63,13 @@ function WorkoutPlan() {
       </div>
 
       <div className="days">
-        <p>Sunday</p>
-        <p>Monday</p>
-        <p>Tuesday</p>
-        <p>Wednesday</p>
-        <p>Thursday</p>
-        <p>Friday</p>
-        <p>Saturday</p>
+        <p>Day1</p>
+        <p>Day2</p>
+        <p>Day3</p>
+        <p>Day4</p>
+        <p>Day5</p>
+        <p>Day6</p>
+        <p>Day7</p>
       </div>
       <div className="days bg exe">
         <p>Rest</p>
@@ -94,14 +94,16 @@ function WorkoutPlan() {
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
         </div>
+        <div className="bigline"></div>
         <div className="gym">
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
           <p>Arcu tortor, purus in mattis at sed integer faucibus. Lorem Ispum.</p>
         </div>
+        <div className="bigline"></div>
         <div className="video">
-          <iframe width="410" height="220" src="https://www.youtube.com/embed/ml6cT4AZdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="380" height="200" src="https://www.youtube.com/embed/ml6cT4AZdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 

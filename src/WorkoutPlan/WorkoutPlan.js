@@ -71,6 +71,13 @@ const [Exercises,setExercises]=useState(["List here"]);
         <p id="dayan"><h4>Friday</h4></p> &nbsp;&nbsp;
         <p id="dayan"><h4>Saturday</h4></p>
         <p id="dayan"><h4>Sunday</h4></p>
+        <p>Day1</p>
+        <p>Day2</p>
+        <p>Day3</p>
+        <p>Day4</p>
+        <p>Day5</p>
+        <p>Day6</p>
+        <p>Day7</p>
       </div>
       <div className="days bg exe">
         <Button onClick={()=>{axios.get(`http://localhost:4000/exercise/${day1plan}`).then(response => {
@@ -131,11 +138,13 @@ const [Exercises,setExercises]=useState(["List here"]);
         {exercises}
     </ul>
         </div>
+        <div className="bigline"></div>
         <div className="gym">
          { description}
         </div>
+        <div className="bigline"></div>
         <div className="video">
-          <iframe width="410" height="220" src="https://www.youtube.com/embed/ml6cT4AZdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="380" height="200" src="https://www.youtube.com/embed/ml6cT4AZdqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
